@@ -7,5 +7,6 @@
 		<class>com.baitaplong3.entity.AbstractEntity</class>
 		<class>com.baitaplong3.entity.UserEntity</class>
 		<class>com.baitaplong3.entity.RoleEntity</class>
+		<class>com.baitaplong3.entity.ContentEntity</class>
 	</persistence-unit>
 </persistence>

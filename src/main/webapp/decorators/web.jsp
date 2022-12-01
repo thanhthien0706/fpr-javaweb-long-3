@@ -80,7 +80,7 @@
 								href="<c:url value='/admin/user/profile'/>"><i
 								class="fa-solid fa-user mr-2" /></i>User Profile</a>
 							<div class="dropdown-divider"></div>
-							<a class="dropdown-item" href="#"><i
+							<a class="dropdown-item" href="<c:url value='/logout'/>"><i
 								class="fa-solid fa-right-from-bracket mr-2"></i>Logout</a>
 						</div>
 					</div>

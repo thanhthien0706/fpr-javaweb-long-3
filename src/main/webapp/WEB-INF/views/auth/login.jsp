@@ -23,21 +23,23 @@
 		<c:if test="${param.accessDenied != null}">
 			<div class="alert alert-danger">you Not authorize</div>
 		</c:if>
-		<form>
+		<form action="j_spring_security_check" method="post">
 			<!-- Email input -->
 			<div class="form-outline mb-4">
-				<label class="form-label" for="form2Example1">Email address</label>
-				<input type="email" id="form2Example1" class="form-control" />
+				<label class="form-label" for="form2Example1">Username</label> <input
+					type="text" id="form2Example1" class="form-control"
+					name="j_username" />
 			</div>
 
 			<!-- Password input -->
 			<div class="form-outline mb-4">
 				<label class="form-label" for="form2Example2">Password</label> <input
-					type="password" id="form2Example2" class="form-control" />
+					type="password" id="form2Example2" class="form-control"
+					name="j_password" />
 			</div>
 
 			<!-- Submit button -->
-			<button type="button" class="btn btn-primary btn-block mb-4">Sign
+			<button type="submit" class="btn btn-primary btn-block mb-4">Sign
 				in</button>
 
 			<!-- Register buttons -->

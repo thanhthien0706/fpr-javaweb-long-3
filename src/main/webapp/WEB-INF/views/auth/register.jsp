@@ -16,23 +16,36 @@
 <body>
 
 	<div class="container">
-		<form>
+		<c:choose>
+			<c:when test="${notifi == true}">
+				<div class="alert alert-success">
+					<strong>Success!</strong> Create Account Of User
+				</div>
+			</c:when>
+			<c:when test="${notifi == false}">
+				<div class="alert alert-danger">
+					<strong>Danger!</strong> Not Create Account
+				</div>
+			</c:when>
+		</c:choose>
+		<form action="<c:url value='/register'/>" method="post">
 			<!-- Email input -->
 			<div class="form-outline mb-4">
 				<label class="form-label" for="usernameInput">User name</label> <input
-					type="text" id="usernameInput" class="form-control" />
+					type="text" id="usernameInput" class="form-control" name="username" />
 			</div>
 
 			<!-- Email input -->
 			<div class="form-outline mb-4">
 				<label class="form-label" for="form2Example1">Email address</label>
-				<input type="email" id="form2Example1" class="form-control" />
+				<input type="email" id="form2Example1" class="form-control"
+					name="email" />
 			</div>
 
 			<!-- Password input -->
 			<div class="form-outline mb-4">
 				<label class="form-label" for="passInput">Password</label> <input
-					type="password" id="passInput" class="form-control" />
+					type="password" id="passInput" class="form-control" name="password" />
 			</div>
 
 			<!-- Re-Password input -->
@@ -42,12 +55,12 @@
 			</div>
 
 			<!-- Submit button -->
-			<button type="button" class="btn btn-primary btn-block mb-4">Register</button>
+			<button type="submit" class="btn btn-primary btn-block mb-4">Register</button>
 
 			<!-- Register buttons -->
 			<div class="text-center">
 				<p>
-				you already account? <a href="<c:url value='/login' />">Login</a>
+					you already account? <a href="<c:url value='/login' />">Login</a>
 				</p>
 			</div>
 		</form>

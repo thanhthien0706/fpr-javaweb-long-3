@@ -18,5 +18,7 @@ public class MyUser extends User {
 	}
 
 	private String email;
-	private String profile;
+	private String fullname;
+	private String phone;
+	private String description;
 }

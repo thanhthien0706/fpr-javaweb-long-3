@@ -24,6 +24,12 @@ import lombok.NonNull;
 @AllArgsConstructor
 public class UserEntity extends AbstractEntity {
 
+	@Column
+	private String firstname;
+
+	@Column
+	private String lastname;
+
 	@Column(nullable = false)
 	private String username;
 
@@ -31,15 +37,18 @@ public class UserEntity extends AbstractEntity {
 	private String password;
 
 	@Column
-	private String salt;
+	private String phone;
 
 	@Column(nullable = false)
 	private String email;
 
 	@Column
-	private String profile;
+	private String description;
 
 	@ManyToOne
 	@JoinColumn(name = "role_id")
 	private RoleEntity role;
+
+	@OneToMany(mappedBy = "AuthorId", fetch = FetchType.LAZY)
+	private List<ContentEntity> contents;
 }

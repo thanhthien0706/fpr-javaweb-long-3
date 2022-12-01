@@ -9,5 +9,7 @@ import com.baitaplong3.entity.UserEntity;
 public interface UserRepository extends JpaRepository<UserEntity, Long> {
 	UserEntity findOneByUsername(String username);
 
+	UserEntity findOneByEmail(String email);
+
 	UserEntity findOneById(Long id);
 }

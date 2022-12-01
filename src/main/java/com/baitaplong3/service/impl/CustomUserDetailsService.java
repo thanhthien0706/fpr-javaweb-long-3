@@ -24,6 +24,7 @@ public class CustomUserDetailsService implements UserDetailsService {
 
 	@Override
 	public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
+		System.out.println(username);
 		UserEntity userEntity = userRepository.findOneByUsername(username);
 
 		if (userEntity == null) {
@@ -38,7 +39,9 @@ public class CustomUserDetailsService implements UserDetailsService {
 
 		myUser.setId(userEntity.getId());
 		myUser.setEmail(userEntity.getEmail());
-		myUser.setProfile(userEntity.getProfile());
+		myUser.setDescription(userEntity.getDescription());
+		myUser.setFullname(userEntity.getFirstname() + " " + userEntity.getLastname());
+		myUser.setPhone(userEntity.getPhone());
 
 		return myUser;
 	}
