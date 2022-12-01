@@ -10,19 +10,21 @@
 	<table class="table">
 		<thead class="thead-light">
 			<tr>
-				<th scope="col">#</th>
+				<th scope="col">ID</th>
 				<th scope="col">Title</th>
 				<th scope="col">Brief</th>
 				<th scope="col">Created Date</th>
 			</tr>
 		</thead>
 		<tbody>
-			<tr>
-				<th scope="row">1</th>
-				<td>Mark</td>
-				<td>Otto</td>
-				<td>@mdo</td>
-			</tr>
+			<c:forEach var="item" items="${contents}">
+				<tr>
+					<th scope="row">${item.id }</th>
+					<td>${item.title }</td>
+					<td>${item.brief }</td>
+					<td>${item.createdTime}</td>
+				</tr>
+			</c:forEach>
 		</tbody>
 	</table>
 </body>
