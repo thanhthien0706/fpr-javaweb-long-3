@@ -16,6 +16,13 @@
 <body>
 
 	<div class="container">
+		<c:if test="${param.incorrectAccount != null}">
+			<div class="alert alert-danger">Username or password incorrect
+			</div>
+		</c:if>
+		<c:if test="${param.accessDenied != null}">
+			<div class="alert alert-danger">you Not authorize</div>
+		</c:if>
 		<form>
 			<!-- Email input -->
 			<div class="form-outline mb-4">
@@ -25,8 +32,7 @@
 
 			<!-- Password input -->
 			<div class="form-outline mb-4">
-				<label class="form-label" for="form2Example2">Password</label>
-				<input
+				<label class="form-label" for="form2Example2">Password</label> <input
 					type="password" id="form2Example2" class="form-control" />
 			</div>
 

@@ -59,9 +59,9 @@
 				</div>
 				<ul class="nav flex-column nav-pills nav-stacked">
 					<li class="${pageName == 'home' ?'active': '' }"><a
-						href="<c:url value='/home' />">View Contents</a></li>
+						href="<c:url value='/admin/home' />">View Contents</a></li>
 					<li class="${pageName == 'content-add' ?'active': '' }"><a
-						href="<c:url value='/content-add' />">Form Content</a></li>
+						href="<c:url value='/admin/content-add' />">Form Content</a></li>
 				</ul>
 				<br>
 			</div>
@@ -76,7 +76,8 @@
 							<i class="fa-solid fa-user"></i>
 						</button>
 						<div class="dropdown-menu">
-							<a class="dropdown-item" href="<c:url value='/user/profile'/>"><i
+							<a class="dropdown-item"
+								href="<c:url value='/admin/user/profile'/>"><i
 								class="fa-solid fa-user mr-2" /></i>User Profile</a>
 							<div class="dropdown-divider"></div>
 							<a class="dropdown-item" href="#"><i

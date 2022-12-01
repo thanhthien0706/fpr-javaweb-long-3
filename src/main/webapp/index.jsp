@@ -1,2 +1,7 @@
 <%@ include file="/common/taglib.jsp"%>
-<c:redirect url="/home" />
+<security:authorize access="isAnonymous()">
+	<c:redirect url="/login" />
+</security:authorize>
+<security:authorize access="isAuthenticated()">
+	<c:redirect url="/admin/home" />
+</security:authorize>

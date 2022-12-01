@@ -5,7 +5,8 @@
 <title>User Profile</title>
 
 <body>
-	<h3 class="mb-4 font-weight-bold">View Content</h3>
+	<h3 class="mb-4 font-weight-bold">View User Content
+	</h3>
 	<form>
 		<div class="form-group">
 			<label for="firstNameInput">First Name</label> <input type="text"
